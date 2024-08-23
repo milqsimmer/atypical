@@ -3,126 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atypical English</title> <!-- Título atualizado -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8ff;
-            color: #333;
-            text-align: center;
-        }
-        header {
-            background-color: #ffcc80;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: #5d4037;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #00796b;
-            font-size: 1.2rem;
-        }
-        section {
-            padding: 40px 20px;
-        }
-        section h2 {
-            font-size: 2rem;
-            color: #00796b;
-        }
-        footer {
-            background-color: #ffcc80;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 25px;
-            margin: 15px;
-            background-color: #00796b;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #004d40;
-        }
-        #login-section {
-            display: none;
-        }
-        .login-btn {
-            background-color: #f57f17;
-        }
-    </style>
+    <title>Atypical English</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-    <h1>Atypical English</h1> <!-- Cabeçalho atualizado -->
+    <h1>Atypical English</h1>
     <nav>
-        <a href="#material">Material de Estudo</a>
-        <a href="#exercicios">Exercícios</a>
-        <a href="#jogos">Jogos</a>
-        <a href="#contato">Entre em Contato</a>
-        <a href="#" onclick="toggleLogin()">Área de Alunos</a>
+        <a href="index.html">Home</a>
+        <a href="material.html">Material de Estudo</a>
+        <a href="exercicios.html">Exercícios</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="contato.html">Entre em Contato</a>
     </nav>
 </header>
 
 <section id="home">
-    <h2>Explore o conteúdo abaixo:</h2>
-    <a href="#material" class="btn">Material de Estudo</a>
-    <a href="#exercicios" class="btn">Exercícios</a>
-    <a href="#jogos" class="btn">Jogos</a>
-    <a href="#contato" class="btn">Entre em Contato</a>
-</section>
-
-<section id="login-section">
-    <h2>Login dos Alunos</h2>
-    <form onsubmit="handleLogin(event)">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" required><br><br>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" required><br><br>
-        <button type="submit" class="btn login-btn">Entrar</button>
-    </form>
+    <h2>WELCOME TO ATYPICAL ENGLISH</h2>
+    <article class="card">
+        <h3>Os Benefícios de Aprender Inglês</h3>
+        <p>
+            Aprender inglês abre portas para um mundo de oportunidades. O inglês é o idioma mais falado globalmente, e dominá-lo pode melhorar significativamente suas chances no mercado de trabalho, ajudá-lo a viajar com confiança e permitir que você se conecte com pessoas de diferentes culturas. Além disso, aprender uma nova língua é conhecido por melhorar as habilidades cognitivas, tornando-o mais perspicaz e criativo. Portanto, mergulhe nos seus estudos e lembre-se, cada pequeno passo o aproxima da fluência!
+        </p>
+    </article>
 </section>
 
 <footer>
     <p>© 2024 Atypical English | Todos os direitos reservados</p>
 </footer>
-
-<script>
-    function toggleLogin() {
-        const loginSection = document.getElementById('login-section');
-        loginSection.style.display = loginSection.style.display === 'none' ? 'block' : 'none';
-    }
-
-    function handleLogin(event) {
-        event.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        // Verificação simples de login (pode ser substituída por uma lógica mais complexa)
-        if (username === 'aluno' && password === 'senha123') {
-            alert('Login bem-sucedido!');
-            // Lógica para redirecionar ou liberar conteúdo protegido aqui
-        } else {
-            alert('Usuário ou senha incorretos!');
-        }
-    }
-</script>
 
 </body>
 </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício - Simple Present</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <!-- Cabeçalho será carregado aqui -->
+
+    <section id="exercicio">
+      <h2>Complete as frases com o verbo correto no presente simples</h2>
+
+      <form id="exercicio-form">
+        <p>1. She <input type="text" id="q1" /> (go) to school every day.</p>
+        <p>2. They <input type="text" id="q2" /> (play) soccer on weekends.</p>
+        <p>3. We <input type="text" id="q3" /> (watch) TV at night.</p>
+        <p>4. He <input type="text" id="q4" /> (read) a book before bed.</p>
+        <p>5. I <input type="text" id="q5" /> (like) ice cream.</p>
+
+        <button type="button" onclick="verificarRespostas()">
+          Verificar Respostas
+        </button>
+      </form>
+
+      <div id="resultado"></div>
+    </section>
+
+    <div id="footer"></div>
+    <!-- Rodapé será carregado aqui -->
+
+    <script>
+      function loadHTML(elementId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          })
+          .catch((error) =>
+            console.error("Erro ao carregar componente:", error)
+          );
+      }
+
+      // Carrega o cabeçalho e o rodapé
+      loadHTML("header", "../header.html");
+      loadHTML("footer", "../footer.html");
+
+      function verificarRespostas() {
+        const respostasCorretas = ["goes", "play", "watch", "reads", "like"];
+        const respostasUsuario = [
+          document.getElementById("q1").value.trim().toLowerCase(),
+          document.getElementById("q2").value.trim().toLowerCase(),
+          document.getElementById("q3").value.trim().toLowerCase(),
+          document.getElementById("q4").value.trim().toLowerCase(),
+          document.getElementById("q5").value.trim().toLowerCase(),
+        ];
+
+        let feedback = "";
+        for (let i = 0; i < respostasCorretas.length; i++) {
+          if (respostasUsuario[i] === respostasCorretas[i]) {
+            feedback += `<p>Resposta ${i + 1}: Correta</p>`;
+          } else {
+            feedback += `<p>Resposta ${i + 1}: Errada. A resposta correta é "${
+              respostasCorretas[i]
+            }"</p>`;
+          }
+        }
+
+        document.getElementById("resultado").innerHTML = feedback;
+      }
+    </script>
+  </body>
+</html>

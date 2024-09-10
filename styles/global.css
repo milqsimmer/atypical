@@ -1,53 +1,111 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald/static/Oswald-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Pontano Sans';
+  src: url('../fonts/Pontano_Sans/static/PontanoSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Robato';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Robato', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #eceff1; /* Fundo Cinza Claro com toque de Azul */
-  color: #1a237e; /* Texto Azul Escuro */
+  background-color: #F5F5F5; /*  whitesmoke, off-white appearance */
+  color: #333333; /* Arnels */
   text-align: center;
 }
 
 header {
-  background-color: #5c6bc0; /* Cabeçalho Azul Suave */
+  box-shadow: 0 4px 2px -2px gray;
+  background-color: white;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-header h1 {
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto; /* Ajusta a altura ao conteúdo */
+  overflow: hidden; /* Garante que o conteúdo seja exibido */
+  width: 60%;
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+.logo {
+  height: 100px;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+.img-1 {
+  height: 80px; /* Define a altura específica para a segunda imagem */
+  width: auto; /* A largura é ajustada automaticamente para manter a proporção */
+  object-fit: contain; /* Garante que a imagem seja contida sem ser cortada */
+}
+.img-2 {
+  height: 50px; /* Define a altura específica para a segunda imagem */
+  width: auto; /* A largura é ajustada automaticamente para manter a proporção */
+  object-fit: contain; /* Garante que a imagem seja contida sem ser cortada */
+  margin-left: 20px;
+}
+  /* Container para menu e redes sociais */
+.menu-social {
+  display: flex;
+  align-items: center;
+}
+nav {
+  margin-right: 20px; /* Optional spacing between menu and social media */
+}
+nav a:hover {
+  color: #f0e68c; /* Cor de Hover no Menu Amarelo */
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-size: 2.5rem;
-  color: #ffffff; /* Texto Branco no Cabeçalho */
+}
+nav ul li {
+  margin-right: 20px;
+}
+nav ul li a {
+  font-family: 'Robato', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333333;
+}
+/* Estilo para os ícones de mídia social */
+.social-media {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Espaço entre o menu e os ícones de mídia social */
+}
+.social-media img {
+  width: 44px;
+  margin-left: 10px;
 }
 
 h1 {
+  font-family: 'Robato', sans-serif;
   font-size: 2.5rem;
-  color: #1a237e;
+  color: #5e175f;
   text-align: center;
 }
 
 h2 {
+  font-family: 'Robato', sans-serif;
   font-size: 2rem;
-  color: #311b92;
+  color: #5e175f;
   margin-top: 30px;
   text-align: center;
-}
-
-nav {
-  margin: 20px 0;
-}
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #ffffff; /* Links Brancos no Menu */
-  font-size: 1.2rem;
-  font-weight: bold;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ff7043; /* Cor de Hover no Menu Coral */
 }
 
 section {
@@ -56,7 +114,7 @@ section {
 
 section h2 {
   font-size: 2rem;
-  color: #1a237e; /* Títulos Azul Escuro */
+  color: #5e175f; /* Arnels */
 }
 
 /* Estilo para Home */
@@ -70,13 +128,13 @@ section#home {
 section#home h2 {
   text-align: center;
   font-size: 2rem;
-  color: #1a237e;
+  color: #5e175f;
 }
 
 section#home p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #1a237e;
+  color: #333333;
   text-align: justify; /* Justifica o texto */
 }
 
@@ -94,18 +152,18 @@ section#home p {
 .card h3 {
   text-align: center; /* Centraliza o título do card */
   font-size: 1.8rem;
-  color: #311b92; /* Cor do título do card */
+  color: #333333; /* Cor do título do card */
 }
 
 .card p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #1a237e;
+  color: #333333;
   text-align: justify; /* Justifica o texto */
 }
 
 footer {
-  background-color: #5c6bc0; /* Rodapé Azul Suave */
+  background-color: #5e175f; /* Rodapé Azul Suave */
   padding: 10px;
   position: fixed;
   bottom: 0;
@@ -115,7 +173,7 @@ footer {
 
 /* Estilo dos botões */
 button {
-  background-color: #5c6bc0; /* Cor de fundo azul suave */
+  background-color: #5e175f; /* Cor de fundo azul suave */
   color: white; /* Cor do texto */
   padding: 10px 20px; /* Espaçamento interno */
   font-size: 1rem; /* Tamanho da fonte */
@@ -162,5 +220,5 @@ ul li a {
 }
 
 ul li a:hover {
-  color: #311b92; /* Hover Links Azul Roxo Escuro */
+  color: #5e175f; /* Hover Links Azul Roxo Escuro */
 }

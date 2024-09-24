@@ -1,0 +1,275 @@
+{
+    "titulo": "Verb To Be Exercises",
+    "exercicios": [
+        {
+            "titulo": "Complete as frases usando o verbo 'to be'",
+            "perguntas": [
+                {
+                    "pergunta": "a. I ____ a teacher.",
+                    "resposta_correta": "am",
+                    "id": "q1-ex1"
+                },
+                {
+                    "pergunta": "b. You ____ my friend.",
+                    "resposta_correta": "are",
+                    "id": "q2-ex1"
+                },
+                {
+                    "pergunta": "c. They ____ students.",
+                    "resposta_correta": "are",
+                    "id": "q3-ex1"
+                },
+                {
+                    "pergunta": "d. He ____ at home.",
+                    "resposta_correta": "is",
+                    "id": "q4-ex1"
+                },
+                {
+                    "pergunta": "e. She ____ a doctor.",
+                    "resposta_correta": "is",
+                    "id": "q5-ex1"
+                },
+                {
+                    "pergunta": "f. I ____ tired after the trip.",
+                    "resposta_correta": "am",
+                    "id": "q6-ex1"
+                },
+                {
+                    "pergunta": "g. You ____ a very good singer.",
+                    "resposta_correta": "are",
+                    "id": "q7-ex1"
+                },
+                {
+                    "pergunta": "h. He ____ my brother.",
+                    "resposta_correta": "is",
+                    "id": "q8-ex1"
+                },
+                {
+                    "pergunta": "i. She ____ 20 years old.",
+                    "resposta_correta": "is",
+                    "id": "q9-ex1"
+                },
+                {
+                    "pergunta": "j. We ____ excited for the concert.",
+                    "resposta_correta": "are",
+                    "id": "q10-ex1"
+                },
+                {
+                    "pergunta": "k. They ____ from Japan.",
+                    "resposta_correta": "are",
+                    "id": "q11-ex1"
+                },
+                {
+                    "pergunta": "l. The cat ____ on the sofa.",
+                    "resposta_correta": "is",
+                    "id": "q12-ex1"
+                },
+                {
+                    "pergunta": "m. It ____ very cold today.",
+                    "resposta_correta": "is",
+                    "id": "q13-ex1"
+                },
+                {
+                    "pergunta": "n. We ____ happy to see you.",
+                    "resposta_correta": "are",
+                    "id": "q14-ex1"
+                },
+                {
+                    "pergunta": "o. The children ____ playing soccer.",
+                    "resposta_correta": "are",
+                    "id": "q15-ex1"
+                },
+                {
+                    "pergunta": "p. She ____ a student.",
+                    "resposta_correta": "is",
+                    "id": "q16-ex1"
+                },
+                {
+                    "pergunta": "q. My parents ____ on vacation.",
+                    "resposta_correta": "are",
+                    "id": "q17-ex1"
+                }
+            ]
+        },
+        {
+            "titulo": "Complete as frases usando a forma negativa do verbo 'to be'",
+            "perguntas": [
+                {
+                    "pergunta": "a. I ____ a teacher (negativo).",
+                    "resposta_correta": ["'m not", "am not"],
+                    "id": "q1-ex2"
+                },
+                {
+                    "pergunta": "b. You ____ my friend (negativo).",
+                    "resposta_correta": ["aren't", "are not"],
+                    "id": "q2-ex2"
+                },
+                {
+                    "pergunta": "c. They ____ students (negativo).",
+                    "resposta_correta": ["aren't", "are not"],
+                    "id": "q3-ex2"
+                },
+                {
+                    "pergunta": "d. He ____ at home (negativo).",
+                    "resposta_correta": ["isn't", "is not"],
+                    "id": "q4-ex2"
+                },
+                {
+                    "pergunta": "e. She ____ a doctor (negativo).",
+                    "resposta_correta": ["isn't", "is not"],
+                    "id": "q5-ex2"
+                },
+                {
+                    "pergunta": "f. The weather ____ nice today (negativo).",
+                    "resposta_correta": ["isn't", "is not"],
+                    "id": "q6-ex2"
+                },
+                {
+                    "pergunta": "g. We ____ ready for the presentation (negativo).",
+                    "resposta_correta": ["aren't", "are not"],
+                    "id": "q7-ex2"
+                },
+                {
+                    "pergunta": "h. It ____ raining right now (negativo).",
+                    "resposta_correta": ["isn't", "is not"],
+                    "id": "q8-ex2"
+                },
+                {
+                    "pergunta": "i. I ____ at home right now (negativo).",
+                    "resposta_correta": ["'m not", "am not"],
+                    "id": "q9-ex2"
+                },
+                {
+                    "pergunta": "j. They ____ going to the party (negativo).",
+                    "resposta_correta": ["aren't", "are not"],
+                    "id": "q10-ex2"
+                },
+                {
+                    "pergunta": "k. She ____ my sister (negativo).",
+                    "resposta_correta": ["isn't", "is not"],
+                    "id": "q11-ex2"
+                },
+                {
+                    "pergunta": "l. We ____ late for the meeting (negativo).",
+                    "resposta_correta": ["aren't", "are not"],
+                    "id": "q12-ex2"
+                },
+                {
+                    "pergunta": "m. It ____ a good idea (negativo).",
+                    "resposta_correta": ["isn't", "is not"],
+                    "id": "q13-ex2"
+                },
+                {
+                    "pergunta": "n. The dogs ____ outside (negativo).",
+                    "resposta_correta": ["aren't", "are not"],
+                    "id": "q14-ex2"
+                },
+                {
+                    "pergunta": "o. You ____ allowed to enter (negativo).",
+                    "resposta_correta": ["aren't", "are not"],
+                    "id": "q15-ex2"
+                },
+                {
+                    "pergunta": "p. He ____ a musician (negativo).",
+                    "resposta_correta": ["isn't", "is not"],
+                    "id": "q16-ex2"
+                },
+                {
+                    "pergunta": "q. My friends ____ here yet (negativo).",
+                    "resposta_correta": ["aren't", "are not"],
+                    "id": "q17-ex2"
+                }
+            ]
+        },
+        {
+            "titulo": "Coloque as frases na forma interrogativa usando o verbo 'to be'",
+            "perguntas": [
+                {
+                    "pergunta": "a. You are a teacher.",
+                    "resposta_correta": "are you a teacher?",
+                    "id": "q1-ex3"
+                },
+                {
+                    "pergunta": "b. He is your friend.",
+                    "resposta_correta": "is he your friend?",
+                    "id": "q2-ex3"
+                },
+                {
+                    "pergunta": "c. They are students.",
+                    "resposta_correta": "are they students?",
+                    "id": "q3-ex3"
+                },
+                {
+                    "pergunta": "d. She is at home.",
+                    "resposta_correta": "is she at home?",
+                    "id": "q4-ex3"
+                },
+                {
+                    "pergunta": "e. It is a car.",
+                    "resposta_correta": "is it a car?",
+                    "id": "q5-ex3"
+                },
+                {
+                    "pergunta": "f. We are late for the movie.",
+                    "resposta_correta": "are we late for the movie?",
+                    "id": "q6-ex3"
+                },
+                {
+                    "pergunta": "g. You are coming to the party.",
+                    "resposta_correta": "are you coming to the party?",
+                    "id": "q7-ex3"
+                },
+                {
+                    "pergunta": "h. The bus is on time.",
+                    "resposta_correta": "is the bus on time?",
+                    "id": "q8-ex3"
+                },
+                {
+                    "pergunta": "i. The kids are in the garden.",
+                    "resposta_correta": "are the kids in the garden?",
+                    "id": "q9-ex3"
+                },
+                {
+                    "pergunta": "j. He is a doctor.",
+                    "resposta_correta": "is he a doctor?",
+                    "id": "q10-ex3"
+                },
+                {
+                    "pergunta": "k. We are ready to leave.",
+                    "resposta_correta": "are we ready to leave?",
+                    "id": "q11-ex3"
+                },
+                {
+                    "pergunta": "l. The dogs are hungry.",
+                    "resposta_correta": "are the dogs hungry?",
+                    "id": "q12-ex3"
+                },
+                {
+                    "pergunta": "m. The weather is nice today.",
+                    "resposta_correta": "is the weather nice today?",
+                    "id": "q13-ex3"
+                },
+                {
+                    "pergunta": "n. They are waiting for us.",
+                    "resposta_correta": "are they waiting for us?",
+                    "id": "q14-ex3"
+                },
+                {
+                    "pergunta": "o. It is raining outside.",
+                    "resposta_correta": "is it raining outside?",
+                    "id": "q15-ex3"
+                },
+                {
+                    "pergunta": "p. She is going to the market.",
+                    "resposta_correta": "is she going to the market?",
+                    "id": "q16-ex3"
+                },
+                {
+                    "pergunta": "q. My parents are at home.",
+                    "resposta_correta": "are my parents at home?",
+                    "id": "q17-ex3"
+                }
+            ]
+        }
+    ]
+}

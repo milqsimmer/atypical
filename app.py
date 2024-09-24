@@ -2,8 +2,16 @@ from flask import Flask, jsonify, request, send_file, render_template
 import os
 import json
 
+# Importar os Blueprints
+from blueprints.exercicios import exercicios_bp
+# from blueprints.material import material_bp
+
 # Inicializa a aplicação Flask
 app = Flask(__name__)
+
+# Registrar os Blueprints
+app.register_blueprint(exercicios_bp, url_prefix='/exercicios')
+# app.register_blueprint(material_bp, url_prefix='/material')
 
 # Define o diretório onde os arquivos de conteúdo estão localizados
 CONTEUDO_DIR = os.path.join(os.getcwd(), "conteudo")
@@ -28,9 +36,9 @@ def material():
 def contato():
     return render_template('menu/contato.html')
 
-@app.route('/exercicios')
-def exercicios():
-    return render_template('menu/exercicios.html')
+# @app.route('/exercicios')
+# def exercicios():
+#     return render_template('menu/exercicios.html')
 
 @app.route('/jogos')
 def jogos():

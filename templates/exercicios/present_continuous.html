@@ -6,6 +6,21 @@
     <title>Atypical English</title>
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/png" />
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}" />
+    <style>
+      .correct {
+        color: green;
+        font-weight: bold;
+      }
+
+      .incorrect {
+        color: red;
+        font-weight: bold;
+      }
+
+      .feedback {
+        margin-left: 10px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -32,17 +47,13 @@
       </div>
     </header>
 
-    <section id="exercicios">
-      <h2>EXERCÍCIOS</h2>
-      <ul>
-        <li><a href="/exercicios/verb_to_be">Verb To Be</a></li>
-        <li>
-          <a href="/exercicios/simple_present">Simple Present</a>
-        </li>
-        <li>
-          <a href="/exercicios/present_continuous">Present Continuous</a>
-        </li>
-      </ul>
+    <section id="exercicio">
+      <h2>Complete as frases usando o presente contínuo</h2>
+      <p>1. She ______ (write) a letter now.</p>
+      <p>2. We ______ (eat) dinner at the moment.</p>
+      <p>3. They ______ (run) in the park.</p>
+      <p>4. He ______ (talk) on the phone.</p>
+      <p>5. I ______ (study) for my exam.</p>
     </section>
 
     <footer>

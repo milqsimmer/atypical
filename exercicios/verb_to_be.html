@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verb To Be Exercises</title>
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <!-- CSS Global (aplicado a todas as páginas) -->
+    <link rel="stylesheet" href="../styles/global.css" />
+
+    <!-- CSS Específico para esta página (sobrescreve o global quando necessário) -->
+    <link rel="stylesheet" href="../styles/exercicios.css" />
+    <style>
+      .correct {
+        color: green;
+        font-weight: bold;
+      }
+
+      .incorrect {
+        color: red;
+        font-weight: bold;
+      }
+
+      .feedback {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Atypical English</h1>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../menu/material.html">Material de Estudo</a>
+        <a href="../menu/exercicios.html">Exercícios</a>
+        <a href="../menu/jogos.html">Jogos</a>
+        <a href="../menu/contato.html">Entre em Contato</a>
+      </nav>
+    </header>
+
+    <section id="exercicio">
+      <h1>Verb To Be Exercises</h1>
+
+      <!-- Exercicio 1 -->
+      <h2>1. Complete as frases usando o verbo "to be"</h2>
+      <form id="exercicio-form-1">
+        <p>
+          a. I <input type="text" id="q1" /> a teacher.<span
+            id="feedback1"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          b. You <input type="text" id="q2" /> my friend.<span
+            id="feedback2"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          c. They <input type="text" id="q3" /> students.<span
+            id="feedback3"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          d. He <input type="text" id="q4" /> at home.<span
+            id="feedback4"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          e. She <input type="text" id="q5" /> a doctor.<span
+            id="feedback5"
+            class="feedback"
+          ></span>
+        </p>
+      </form>
+      <div style="text-align: center; margin-top: 20px">
+        <button type="button" onclick="verificarExercicio1()">
+          Verificar Exercício 1
+        </button>
+      </div>
+
+      <!-- Exercicio 2 -->
+      <h2>2. Complete as frases usando a forma negativa do verbo "to be"</h2>
+      <form id="exercicio-form-2">
+        <p>
+          a. I <input type="text" id="q6" /> a teacher.<span
+            id="feedback6"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          b. You <input type="text" id="q7" /> my friend.<span
+            id="feedback7"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          c. They <input type="text" id="q8" /> students.<span
+            id="feedback8"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          d. He <input type="text" id="q9" /> at home.<span
+            id="feedback9"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          e. She <input type="text" id="q10" /> a doctor.<span
+            id="feedback10"
+            class="feedback"
+          ></span>
+        </p>
+      </form>
+      <div style="text-align: center; margin-top: 20px">
+        <button type="button" onclick="verificarExercicio2()">
+          Verificar Exercício 2
+        </button>
+      </div>
+
+      <!-- Exercicio 3 -->
+      <h2>
+        3. Coloque as frases na forma interrogativa usando o verbo "to be"
+      </h2>
+      <form id="exercicio-form-3">
+        <p>
+          a. You are a teacher. <input type="text" id="q11" /><span
+            id="feedback11"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          b. He is your friend. <input type="text" id="q12" /><span
+            id="feedback12"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          c. They are students. <input type="text" id="q13" /><span
+            id="feedback13"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          d. She is at home. <input type="text" id="q14" /><span
+            id="feedback14"
+            class="feedback"
+          ></span>
+        </p>
+        <p>
+          e. It is a car. <input type="text" id="q15" /><span
+            id="feedback15"
+            class="feedback"
+          ></span>
+        </p>
+      </form>
+      <div style="text-align: center; margin-top: 20px">
+        <button type="button" onclick="verificarExercicio3()">
+          Verificar Exercício 3
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <p style="text-align: center">
+        © 2024 Atypical English | Todos os direitos reservados
+      </p>
+    </footer>
+
+    <script>
+      function verificarExercicio1() {
+        const respostasCorretas = ["am", "are", "are", "is", "is"];
+
+        for (let i = 0; i < respostasCorretas.length; i++) {
+          const respostaUsuario = document
+            .getElementById("q" + (i + 1))
+            .value.trim()
+            .toLowerCase();
+          const feedbackElement = document.getElementById("feedback" + (i + 1));
+
+          if (respostaUsuario === respostasCorretas[i]) {
+            feedbackElement.textContent = " Correto";
+            feedbackElement.className = "feedback correct";
+          } else {
+            feedbackElement.textContent = ` Errado. Resposta correta: "${respostasCorretas[i]}"`;
+            feedbackElement.className = "feedback incorrect";
+          }
+        }
+      }
+
+      function verificarExercicio2() {
+        const respostasCorretas = [
+          { contraida: "'m not", completa: "am not" },
+          { contraida: "aren't", completa: "are not" },
+          { contraida: "aren't", completa: "are not" },
+          { contraida: "isn't", completa: "is not" },
+          { contraida: "isn't", completa: "is not" },
+        ];
+
+        for (let i = 0; i < respostasCorretas.length; i++) {
+          const respostaUsuario = document
+            .getElementById("q" + (i + 6))
+            .value.trim()
+            .toLowerCase();
+          const feedbackElement = document.getElementById("feedback" + (i + 6));
+
+          if (
+            respostaUsuario === respostasCorretas[i].contraida ||
+            respostaUsuario === respostasCorretas[i].completa
+          ) {
+            feedbackElement.textContent = " Correto";
+            feedbackElement.className = "feedback correct";
+          } else {
+            feedbackElement.textContent = ` Errado. Resposta correta: "${respostasCorretas[i].contraida}" ou "${respostasCorretas[i].completa}"`;
+            feedbackElement.className = "feedback incorrect";
+          }
+        }
+      }
+
+      function verificarExercicio3() {
+        const respostasCorretas = [
+          "are you a teacher?",
+          "is he your friend?",
+          "are they students?",
+          "is she at home?",
+          "is it a car?",
+        ];
+
+        for (let i = 0; i < respostasCorretas.length; i++) {
+          const respostaUsuario = document
+            .getElementById("q" + (i + 11))
+            .value.trim()
+            .toLowerCase();
+          const feedbackElement = document.getElementById(
+            "feedback" + (i + 11)
+          );
+
+          if (respostaUsuario === respostasCorretas[i]) {
+            feedbackElement.textContent = " Correto";
+            feedbackElement.className = "feedback correct";
+          } else {
+            feedbackElement.textContent = ` Errado. Resposta correta: "${respostasCorretas[i]}"`;
+            feedbackElement.className = "feedback incorrect";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

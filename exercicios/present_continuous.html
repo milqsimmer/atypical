@@ -3,33 +3,212 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exercício - Present Continuous</title>
-    <link rel="icon" href="../favicon.png" type="image/png" />
+    <title>Atypical English</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="../styles/global.css" />
+    <!-- CSS Específico para esta página (sobrescreve o global quando necessário) -->
+    <link rel="stylesheet" href="../styles/exercicios.css" />
   </head>
   <body>
     <header>
-      <h1>Exercício - Present Continuous</h1>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../material.html">Material de Estudo</a>
-        <a href="../exercicios.html">Exercícios</a>
-        <a href="../jogos.html">Jogos</a>
-        <a href="../contato.html">Entre em Contato</a>
-      </nav>
+      <div class="header-container">
+        <div class="logo">
+          <img class="img-1" src="../img/favicon.png" alt="Logo1">
+          <img class="img-2" src="../img/atypical-2.png" alt="Logo2">
+        </div>
+        <div class="menu-social">
+          <nav>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../menu/material.html">Conteúdos</a></li>
+              <li><a href="../menu/exercicios.html">Exercícios</a></li>
+              <li><a href="../menu/jogos.html">Jogos</a></li>
+              <li><a href="../menu/contato.html">Contato</a></li>
+            </ul>
+          </nav>
+          <div class="social-media">
+            <a href="#"><img src="../img/instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="../img/whatsapp-icon.png" alt="Whatsapp"></a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <section id="exercicio">
-      <h2>Complete as frases usando o presente contínuo</h2>
-      <p>1. She ______ (write) a letter now.</p>
-      <p>2. We ______ (eat) dinner at the moment.</p>
-      <p>3. They ______ (run) in the park.</p>
-      <p>4. He ______ (talk) on the phone.</p>
-      <p>5. I ______ (study) for my exam.</p>
+      <h1>Present Continuous Exercises</h1>
+
+      <h2>1. Complete as frases usando o "Present Continuous Tense"</h2>
+        <form id="exercicio-form-1">
+          <p>a. She <input type="text" id="q1" /> (write) a letter now.
+            <span id="feedback1" class="feedback"></span>
+          </p>
+          <p>b. We <input type="text" id="q2" /> (eat) dinner at the moment.
+            <span id="feedback2" class="feedback"></span>
+          </p>
+          <p>c. They <input type="text" id="q3" /> (run) in the park.
+            <span id="feedback3" class="feedback"></span>
+          </p>
+          <p>d. He <input type="text" id="q4" /> (talk) on the phone.
+            <span id="feedback4" class="feedback"></span>
+          </p>
+          <p>e. I <input type="text" id="q5" /> (study) for my exam.
+            <span id="feedback5" class="feedback"></span>
+          </p>
+          <!-- Continuação com novas letras -->
+          <p>f. She <input type="text" id="q6" /> (study) for her exam right now.
+            <span id="feedback6" class="feedback"></span>
+          </p>
+          <p>g. We <input type="text" id="q7" /> (watch) a movie at the moment.
+            <span id="feedback7" class="feedback"></span>
+          </p>
+          <p>h. They <input type="text" id="q8" /> (play) soccer in the park.
+            <span id="feedback8" class="feedback"></span>
+          </p>
+          <p>i. I <input type="text" id="q9" /> (read) an interesting book these days.
+            <span id="feedback9" class="feedback"></span>
+          </p>
+          <p>j. The kids <input type="text" id="q10" /> (run) in the backyard.
+            <span id="feedback10" class="feedback"></span>
+          </p>
+          <p>k. He <input type="text" id="q11" /> (cook) dinner for the family tonight.
+            <span id="feedback11" class="feedback"></span>
+          </p>
+          <p>l. You <input type="text" id="q12" /> (work) late today?
+            <span id="feedback12" class="feedback"></span>
+          </p>
+          <p>m. She <input type="text" id="q13" /> (not/sing) in the concert this weekend.
+            <span id="feedback13" class="feedback"></span>
+          </p>
+          <p>n. We <input type="text" id="q14" /> (have) lunch together at the new restaurant.
+            <span id="feedback14" class="feedback"></span>
+          </p>
+          <p>o. It <input type="text" id="q15" /> (rain) a lot this week.
+            <span id="feedback15" class="feedback"></span>
+          </p>
+        </form>
+      <div style="text-align: center; margin-top: 20px">
+        <button type="button" onclick="verificarExercicio1()">
+          Verificar Exercício 1
+        </button>
+      </div>
+
+      <!-- Exercicio 2 -->
+      <h2>2. Transforme as frases no Present Continuous</h2>
+      <form id="exercicio-form-2">
+        <p>a. She eats dinner. → She <input type="text" id="q16" /> (eat) dinner.
+          <span id="feedback16" class="feedback"></span>
+        </p>
+        <p>b. They don't play football. → They <input type="text" id="q17" /> (not/play) football.
+          <span id="feedback17" class="feedback"></span>
+        </p>
+        <p>c. I read a book. → I <input type="text" id="q18" /> (read) a book.
+          <span id="feedback18" class="feedback"></span>
+        </p>
+        <p>d. We travel to London. → We <input type="text" id="q19" /> (travel) to London.
+          <span id="feedback19" class="feedback"></span>
+        </p>
+        <p>e. He watches TV. → He <input type="text" id="q20" /> (watch) TV.
+          <span id="feedback20" class="feedback"></span>
+        </p>
+        <p>f. The cat sleeps on the sofa. → The cat <input type="text" id="q21" /> (sleep) on the sofa.
+          <span id="feedback21" class="feedback"></span>
+        </p>
+        <p>g. You don't talk to me. → You <input type="text" id="q22" /> (not/talk) to me.
+          <span id="feedback22" class="feedback"></span>
+        </p>
+        <p>h. They write a letter. → They <input type="text" id="q23" /> (write) a letter.
+          <span id="feedback23" class="feedback"></span>
+        </p>
+        <p>i. We walk to the park. → We <input type="text" id="q24" /> (walk) to the park.
+          <span id="feedback24" class="feedback"></span>
+        </p>
+        <p>j. She cooks dinner for the family. → She <input type="text" id="q25" /> (cook) dinner for the family.
+          <span id="feedback25" class="feedback"></span>
+        </p>
+      </form>   
+      <div style="text-align: center; margin-top: 20px">
+        <button type="button" onclick="verificarExercicio2()">
+          Verificar Exercício 2
+        </button>
+      </div>
     </section>
 
     <footer>
       <p>© 2024 Atypical English | Todos os direitos reservados</p>
     </footer>
+
+    <script>
+      function verificarExercicio1() {
+        // Array com respostas possíveis para cada questão
+        const respostasCorretas = [
+          ["is writing"],           // a. She (write) a letter now.
+          ["are eating"],           // b. We (eat) dinner at the moment.
+          ["are running"],          // c. They (run) in the park.
+          ["is talking"],           // d. He (talk) on the phone.
+          ["am studying"],          // e. I (study) for my exam.
+          ["is studying"],          // f. She (study) for her exam right now.
+          ["are watching"],         // g. We (watch) a movie at the moment.
+          ["are playing"],          // h. They (play) soccer in the park.
+          ["am reading"],           // i. I (read) an interesting book these days.
+          ["are running"],          // j. The kids (run) in the backyard.
+          ["is cooking"],           // k. He (cook) dinner for the family tonight.
+          ["are you working", "you are working"], // l. You (work) late today?
+          ["is not singing", "isn't singing"],    // m. She (not/sing) in the concert this weekend.
+          ["are having"],           // n. We (have) lunch together at the new restaurant.
+          ["is raining"]            // o. It (rain) a lot this week.
+        ];
+
+        for (let i = 0; i < respostasCorretas.length; i++) {
+          const respostaUsuario = document
+            .getElementById("q" + (i + 1))
+            .value.trim()
+            .toLowerCase();
+          const feedbackElement = document.getElementById("feedback" + (i + 1));
+
+          // Verifica se a resposta do usuário está em uma das respostas corretas
+          if (respostasCorretas[i].includes(respostaUsuario)) {
+            feedbackElement.textContent = " Correto";
+            feedbackElement.className = "feedback correct";
+          } else {
+            feedbackElement.textContent = ` Errado. Resposta correta: "${respostasCorretas[i][0]}"`;
+            feedbackElement.className = "feedback incorrect";
+          }
+        }
+      }
+
+      function verificarExercicio2() {
+        // Array com respostas possíveis para cada questão no Exercicio 2
+        const respostasCorretas = [
+          ["is eating"],                   // a. She (eat) dinner.
+          ["are not playing", "aren't playing"],  // b. They (not/play) football.
+          ["am reading"],                  // c. I (read) a book.
+          ["are traveling", "are travelling"], // d. We (travel) to London.
+          ["is watching"],                 // e. He (watch) TV.
+          ["is sleeping"],                 // f. The cat (sleep) on the sofa.
+          ["are not talking", "aren't talking"],  // g. You (not/talk) to me.
+          ["are writing"],                 // h. They (write) a letter.
+          ["are walking"],                 // i. We (walk) to the park.
+          ["is cooking"]                   // j. She (cook) dinner for the family.
+        ];
+
+        for (let i = 0; i < respostasCorretas.length; i++) {
+          const respostaUsuario = document
+            .getElementById("q" + (i + 16)) // Começando no ID 16, já que é o Exercicio 2
+            .value.trim()
+            .toLowerCase();
+          const feedbackElement = document.getElementById("feedback" + (i + 16));
+
+          // Verifica se a resposta do usuário está entre as respostas corretas
+          if (respostasCorretas[i].includes(respostaUsuario)) {
+            feedbackElement.textContent = " Correto";
+            feedbackElement.className = "feedback correct";
+          } else {
+            feedbackElement.textContent = ` Errado. Resposta correta: "${respostasCorretas[i][0]}"`;
+            feedbackElement.className = "feedback incorrect";
+          }
+        }
+      }
+
+    </script>
   </body>
 </html>

@@ -16,12 +16,14 @@
         </div>
         <div class="menu-social">
           <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="menu/material.html">Conteúdos</a></li>
-              <li><a href="menu/exercicios.html">Exercícios</a></li>
-              <li><a href="menu/jogos.html">Jogos</a></li>
-              <li><a href="menu/contato.html">Contato</a></li>
+            <!-- Botão "Menu" será um item dentro do nav, visível apenas em telas menores -->
+            <ul class="nav-menu">
+              <li class="menu-btn-container"><a href="javascript:void(0)" class="menu-btn">Menu</a></li>
+              <li class="nav-item"><a href="index.html">Home</a></li>
+              <li class="nav-item"><a href="menu/material.html">Conteúdos</a></li>
+              <li class="nav-item"><a href="menu/exercicios.html">Exercícios</a></li>
+              <li class="nav-item"><a href="menu/jogos.html">Jogos</a></li>
+              <li class="nav-item"><a href="menu/contato.html">Contato</a></li>
             </ul>
           </nav>
           <div class="social-media">
@@ -29,8 +31,16 @@
             <a href="#"><img src="img/whatsapp-icon.png" alt="Whatsapp"></a>
           </div>
         </div>
+        <!-- Dropdown para o "Menu" -->
+        <ul class="dropdown-content" id="dropdownContent">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu/material.html">Conteúdos</a></li>
+          <li><a href="menu/exercicios.html">Exercícios</a></li>
+          <li><a href="menu/jogos.html">Jogos</a></li>
+          <li><a href="menu/contato.html">Contato</a></li>
+        </ul>
       </div>
-    </header>
+    </header>   
 
     <section id="home">
       <h2>HOME</h2>
@@ -52,5 +62,12 @@
     <footer>
       <p>© 2024 Atypical English | Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+      document.querySelector('.menu-btn').addEventListener('click', function() {
+        const dropdownContent = document.getElementById('dropdownContent');
+        dropdownContent.classList.toggle('show-dropdown');
+      });
+    </script>
   </body>
 </html>

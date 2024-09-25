@@ -56,6 +56,12 @@ header {
   object-fit: contain; /* Garante que a imagem seja contida sem ser cortada */
   margin-left: 20px;
 }
+/* Media query para telas menores que 1060px */
+@media (max-width: 1060px) {
+  .img-2 {
+    display: none; /* Esconde a imagem em telas menores que 1060px */
+  }
+}
   /* Container para menu e redes sociais */
 .menu-social {
   display: flex;
@@ -92,6 +98,79 @@ nav ul li a {
   width: 44px;
   margin-left: 10px;
 }
+
+/* Estilo para os links do menu e o botão Menu */
+.menu-btn-container {
+  display: none; /* Esconde o botão "Menu" por padrão */
+}
+
+nav ul li a, .menu-btn {
+  font-family: 'Robato', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333333;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Efeito de hover para os links e o botão Menu */
+nav a:hover, .menu-btn:hover {
+  color: #f0e68c; /* Cor de Hover no Menu Amarelo */
+}
+
+/* Oculta o menu dropdown por padrão */
+.dropdown-content {
+  display: none; /* Esconde o dropdown até que seja clicado */
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  list-style-type: none; /* Remove bullets */
+  margin: 0;
+  z-index: 1;
+}
+
+/* Estilo para os itens dentro do dropdown */
+.dropdown-content li {
+  margin: 10px 0;
+}
+
+/* Estilo para os links dentro do dropdown */
+.dropdown-content li a {
+  font-family: 'Robato', sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333333;
+}
+
+/* Efeito de hover nos links dentro do dropdown */
+.dropdown-content li a:hover {
+  color: #f0e68c;
+}
+
+/* Media query para telas menores que 1600px */
+@media (max-width: 1600px) {
+  /* Esconde os itens do menu normal, exceto o botão "Menu" */
+  .nav-item {
+    display: none; /* Esconde os outros itens do nav */
+  }
+
+  /* Exibe o botão "Menu" */
+  .menu-btn-container {
+    display: inline-block; /* Mostra o botão "Menu" */
+  }
+
+  /* A social media continua visível */
+  .social-media {
+    display: flex; /* Mantém a social media visível em telas menores */
+  }
+}
+
+/* Mostrar dropdown quando clicado */
+.show-dropdown {
+  display: block;
+}
+
 
 h1 {
   font-family: 'Robato', sans-serif;

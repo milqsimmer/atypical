@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atypical English</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/png" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/global.css') }}" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img class="img-1" src="{{ url_for('static', filename='img/favicon.png') }}" alt="Logo1">
+          <img class="img-2" src="{{ url_for('static', filename='img/atypical-2.png') }}" alt="Logo2">
+        </div>
+        <div class="menu-social">
+          <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/material">Conteúdos</a></li>
+              <li><a href="/exercicios">Exercícios</a></li>
+              <li><a href="/jogos">Jogos</a></li>
+              <li><a href="/contato">Contato</a></li>
+            </ul>
+          </nav>
+          <div class="social-media">
+            <a href="#"><img src="{{ url_for('static', filename='img/instagram-icon.png') }}" alt="Instagram"></a>
+            <a href="#"><img src="{{ url_for('static', filename='img/whatsapp-icon.png') }}" alt="Whatsapp"></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="exercicios">
+      <h2>EXERCÍCIOS</h2>
+      <ul>
+        <li><a href="/exercicios/verb_to_be">Verb To Be</a></li>
+        <li>
+          <a href="/exercicios/simple_present">Simple Present</a>
+        </li>
+        <li>
+          <a href="/exercicios/present_continuous">Present Continuous</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2024 Atypical English | Todos os direitos reservados</p>
+    </footer>
+  </body>
+</html>

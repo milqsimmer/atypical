@@ -1,0 +1,58 @@
+# Ignorar o ambiente virtual
+venv/
+.env/
+.venv/
+
+# Ficheiros e diretórios de compilação do Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+
+# Caches e logs
+*.log
+*.pot
+*.pid
+*.py[cod]
+*.sqlite3
+*.db
+*.sqlite
+*.sqlite3-journal
+
+# Configurações locais e de ambiente
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# Ficheiros gerados pelo sistema
+.DS_Store
+Thumbs.db
+*.bak
+*.backup
+*.orig
+
+# Arquivos de pacotes
+*.wheel
+*.whl
+*.eggs
+
+# Arquivos de configuração de pacotes (pip, pipenv)
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Outros arquivos temporários
+*.tmp
+*.temp

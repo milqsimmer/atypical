@@ -18,7 +18,16 @@
           <nav>
             <!-- Botão "Menu" será um item dentro do nav, visível apenas em telas menores -->
             <ul class="nav-menu">
-              <li class="menu-btn-container"><a href="javascript:void(0)" class="menu-btn">Menu</a></li>
+              <li class="menu-btn-container">
+                <a href="javascript:void(0)" class="menu-btn">Menu</a>
+                <ul class="dropdown-content">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="menu/material.html">Conteúdos</a></li>
+                  <li><a href="menu/exercicios.html">Exercícios</a></li>
+                  <li><a href="menu/jogos.html">Jogos</a></li>
+                  <li><a href="menu/contato.html">Contato</a></li>
+                </ul>
+              </li>
               <li class="nav-item"><a href="index.html">Home</a></li>
               <li class="nav-item"><a href="menu/material.html">Conteúdos</a></li>
               <li class="nav-item"><a href="menu/exercicios.html">Exercícios</a></li>
@@ -31,14 +40,6 @@
             <a href="#"><img src="img/whatsapp-icon.png" alt="Whatsapp"></a>
           </div>
         </div>
-        <!-- Dropdown para o "Menu" -->
-        <ul class="dropdown-content" id="dropdownContent">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu/material.html">Conteúdos</a></li>
-          <li><a href="menu/exercicios.html">Exercícios</a></li>
-          <li><a href="menu/jogos.html">Jogos</a></li>
-          <li><a href="menu/contato.html">Contato</a></li>
-        </ul>
       </div>
     </header>   
 
@@ -57,17 +58,88 @@
           pequeno passo o aproxima da fluência!
         </p>
       </article>
+
+      <!-- <h3>EXERCÍCIOS EM DESTAQUE</h3>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Verb To Be</h3>
+          <p>Pratique formas afirmativas, negativas e interrogativas.</p>
+          <p><a href="exercicios/verb_to_be.html">Ir para os exercícios</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Simple Present</h3>
+          <p>Complete frases do dia a dia no presente simples.</p>
+          <p><a href="exercicios/simple_present.html">Ir para os exercícios</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Present Continuous</h3>
+          <p>Veja ações que estão acontecendo agora.</p>
+          <p>
+            <a href="exercicios/present_continuous.html">Ir para os exercícios</a>
+          </p>
+        </article>
+      </div> -->
+
+      <h3>CONTEÚDO EM DESTAQUE</h3>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>BBC 6 Minute English</h3>
+          <p>
+            Ouça um episódio autêntico em inglês da BBC para treinar
+            listening e vocabulário em contexto.
+          </p>
+          <p>
+            Episódio sugerido:
+            <a
+              href="https://www.bbc.com/learningenglish/english/features/6-minute-english_2023/ep-231214"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="featured-link"
+            >
+              6 minutes english - Can we live without plastic?
+            </a>
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>BBC News – Vocabulário em contexto</h3>
+          <p>
+            Leia uma notícia em inglês para praticar leitura, vocabulário
+            e compreensão de textos autênticos.
+          </p>
+          <p>
+            Artigo sugerido:
+            <a
+              href="https://www.bbc.com/news/articles/cp3zzv40422o"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="featured-link"
+            >
+              Eight surprise takeaways from the Oscar nominations
+            </a>.
+          </p>
+        </article>
+      </div>
     </section>
 
     <footer>
-      <p>© 2024 Atypical English | Todos os direitos reservados.</p>
+      <p id="copyright"></p>
     </footer>
 
     <script>
-      document.querySelector('.menu-btn').addEventListener('click', function() {
-        const dropdownContent = document.getElementById('dropdownContent');
-        dropdownContent.classList.toggle('show-dropdown');
-      });
+      const startYear = 2024;
+      const currentYear = new Date().getFullYear();
+
+      const years = (currentYear > startYear)
+        ? `${startYear}–${currentYear}`
+        : `${startYear}`;
+
+      document.getElementById("copyright").textContent =
+        `© ${years} Atypical English | Todos os direitos reservados.`;
     </script>
   </body>
 </html>

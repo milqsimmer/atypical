@@ -36,9 +36,10 @@ header {
   justify-content: space-between;
   align-items: center;
   height: auto; /* Ajusta a altura ao conteúdo */
-  overflow: hidden; /* Garante que o conteúdo seja exibido */
+  overflow: visible; /* Permite que o dropdown apareça abaixo do header */
   width: 60%;
   margin: 0 auto; /* Centraliza horizontalmente */
+  position: relative; /* anchor for dropdown */
 }
 .logo {
   height: 100px;
@@ -67,10 +68,11 @@ header {
 .menu-social {
   display: flex;
   align-items: center;
-}
+ }
 nav {
   margin-right: 20px; /* Optional spacing between menu and social media */
-}
+  position: relative; /* Permite posicionar o dropdown em relação ao nav */
+ }
 nav a:hover {
   color: #f0e68c; /* Cor de Hover no Menu Amarelo */
 }
@@ -103,6 +105,9 @@ nav ul li a {
 /* Estilo para os links do menu e o botão Menu */
 .menu-btn-container {
   display: none; /* Esconde o botão "Menu" por padrão */
+  position: relative; /* Ancora o dropdown ao li do botão */
+  width: 120px;
+  margin-right: 0; 
 }
 
 nav ul li a,
@@ -112,24 +117,30 @@ nav ul li a,
   text-decoration: none;
   color: #333333;
   cursor: pointer;
-  padding: 10px;
+  display: block;     /* ocupa toda a largura do li */
+  padding: 10px 16px;
+  background-color: transparent;
 }
 
-/* Efeito de hover para os links e o botão Menu */
-nav a:hover,
-.menu-btn:hover {
+/* Efeito de hover para os links (Menu tem regra própria abaixo) */
+nav a:hover {
   color: #f0e68c; /* Cor de Hover no Menu Amarelo */
 }
 
 /* Oculta o menu dropdown por padrão */
 .dropdown-content {
-  display: none; /* Esconde o dropdown até que seja clicado */
+  display: none; /* Esconde o dropdown por padrão */
   position: absolute;
+  top: 100%;        /* logo abaixo do botão Menu */
+  left: 0;          /* alinhado à esquerda do botão */
+  width: 100%;
+  box-sizing: border-box;
+
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  list-style-type: none; /* Remove bullets */
+  padding: 0;
   margin: 0;
+  list-style-type: none;
   z-index: 1;
 }
 
@@ -140,15 +151,20 @@ nav a:hover,
 
 /* Estilo para os links dentro do dropdown */
 .dropdown-content li a {
+  display: block;
+  padding: 10px 16px;
   font-family: "Robato", sans-serif;
   font-size: 18px;
   text-decoration: none;
   color: #333333;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
 }
 
 /* Efeito de hover nos links dentro do dropdown */
 .dropdown-content li a:hover {
-  color: #f0e68c;
+  background-color: #f8f1ff; /* roxo bem claro */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
 }
 
 /* Media query para telas menores que 1600px */
@@ -169,9 +185,17 @@ nav a:hover,
   }
 }
 
-/* Mostrar dropdown quando clicado */
-.show-dropdown {
+/* Mostrar dropdown e destacar botão quando o mouse está sobre o item Menu */
+.menu-btn-container:hover .dropdown-content,
+.menu-btn-container:focus-within .dropdown-content {
   display: block;
+}
+
+.menu-btn-container:hover .menu-btn,
+.menu-btn-container:focus-within .menu-btn {
+  background-color: #5e175f;
+  color: #ffffff;
+  border-radius: 4px 4px 0 0;;
 }
 
 h1 {
@@ -200,7 +224,7 @@ section h2 {
 
 /* Estilo para Home */
 section#home {
-  padding: 40px 20px;
+  padding: 40px 20px 120px;
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
@@ -247,7 +271,39 @@ section#conteudo {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333333;
-  text-align: justify; /* Justifica o texto */
+  text-align: justify; /* Justifica o texto para parágrafos longos */
+}
+
+/* Nas grades de cards na home, alinhar à esquerda para evitar espaçamento estranho */
+section#home .card-grid .card p {
+  text-align: justify;
+}
+
+.featured-link {
+  color: #5e175f;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  font-weight: 400;
+}
+
+.featured-link:hover {
+  text-decoration-thickness: 2px;
+  font-weight: 600;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 20px auto 0;
+}
+
+section#home h3 {
+  text-align: center;
+  margin-top: 40px;
+  color: #5e175f;
 }
 
 footer {
